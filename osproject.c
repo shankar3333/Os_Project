@@ -32,7 +32,7 @@ for(i=0;i<n;i++)
 	}	
         b_t[i]=a_t[i]*2;
         printf("Burst Time:%d\n",b_t[i]);
-        printf("*******************************");
+        printf("******************************");
 	pthread_mutex_unlock(&ss);
 }
 
