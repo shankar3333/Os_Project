@@ -6,7 +6,7 @@
 #include<fcntl.h>
 #include<pthread.h>
 
-pthread_mutex_t ss; 
+pthread_mutex_t ss;
 int main()
 {
 pthread_mutex_init(&ss, NULL);
@@ -25,9 +25,9 @@ for(i=0;i<n;i++)
 	label:
         printf("Enter Arrival time:");
         scanf("%d",&a_t[i]);
-	if (a_t[i]==0)
+	if (a_t[i]==0 || a_t[i]<0)
 	{
-		printf("\n Invalid arrival time as it shouldn't be zero. plz re-enter the arrival time \n");
+		printf("\n Invalid arrival time as it shouldn't be zero or negative. plz re-enter the arrival time \n");
 		goto label;
 	}	
         b_t[i]=a_t[i]*2;
